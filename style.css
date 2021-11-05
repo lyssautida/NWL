@@ -6,15 +6,15 @@ html,
 body {
   --black: hsl(240, 6%, 13%);
   --grey: hsl(240, 9%, 89%);
-
   height: 100%;
+
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  display: grid;
-  place-items: center;
+  display: grid; /* posicicona elementos 2D Layouts*/
+  place-items: center; /*funciona por causa do DISPLAU GRID*/
 }
 
 main {
@@ -25,7 +25,7 @@ main {
 
 .container {
   max-width: 250px;
-  margin-left: auto;
+  margin-left: auto; /*divide automaticamente as margens*/
   margin-right: auto;
   text-align: center;
 
@@ -35,20 +35,20 @@ main {
 .avatar {
   width: 10rem;
   margin: 11.5rem auto 0;
-
-  position: relative;
+  position: relative; /*referência para position absolute*/
 }
 
 .avatar span {
-  position: absolute;
+  position: absolute; /*deixa o span no mesmo nível em relação ao relative*/
   top: -15px;
-  z-index: 1;
+  z-index: 1; /*voltar no nível (profundidade) principal*/
 }
 
 .avatar > img {
+  /* > img pega o primeiro nível de avatar*/
   width: 10rem;
   height: 11.5rem;
-  object-fit: cover;
+  object-fit: cover; /* imagem fica proporcinal*/
 
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
@@ -69,7 +69,7 @@ a {
   gap: 0.75rem;
 
   justify-content: center;
-  align-items: center;
+  align-items: center; /*garantir o justify center*/
 }
 
 p {
@@ -79,11 +79,12 @@ p {
 ul {
   margin-top: 4rem;
 
-  list-style: none;
+  list-style: none; /*tira as bolinhas da lista*/
   padding: 0;
 
-  display: flex;
-  gap: 0.5rem;
+  display: flex; /*elementos um ao lado do outro*/
+  gap: 0.5rem; /* espaços entre eles*/
 
-  justify-content: center;
+  justify-content: center; /*usa por causa do DISPLAY FLEX*/
+  /*não se usa text align-text, pq não é texto*/
 }
